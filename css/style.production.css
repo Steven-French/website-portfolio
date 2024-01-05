@@ -1,0 +1,178 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-size: medium;
+    line-height: normal;
+    text-align: center;
+    margin: 20px;
+}
+
+header {
+    font-size: medium;
+    line-height: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+main {
+    font-size: medium;
+    line-height: normal;
+    text-align: center;
+}
+
+footer {
+    font-size: medium;
+    line-height: normal;
+    text-align: center;
+    display: block;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+    -webkit-transition-property: -webkit-text-decoration;
+    transition-property: -webkit-text-decoration;
+    -o-transition-property: text-decoration;
+    transition-property: text-decoration;
+    transition-property: text-decoration, -webkit-text-decoration;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+}
+  
+a:visited {
+    color: blue;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+button {
+    background-color: lightblue;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+}
+
+button:hover {
+    background-color: lightskyblue;
+}
+
+.profile_pic  {
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.outdoor_pic{
+    max-width: 300px;
+    max-height: auto;
+}
+
+.grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.grid_item {
+    background-color: lightgray;
+}
+
+.inline_grid {
+    display: inline;
+}
+
+a {
+    color: blue;
+}
+
+inline-grid {
+    color: blue;
+}
+
+.mountain {
+    text-align: center;
+    margin: 10px;
+}
+
+@media all and (min-width: 500px) and (max-width:750px) {
+    .grid {
+        -ms-grid-columns: 1fr 10px 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 20px;
+      }
+}
+
+@media all and (max-width:500px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+      }
+      .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+      }
+      h1 {
+        font-size: 20px;
+      }
+}
+
+@-webkit-keyframes color-change {
+    from {
+      fill: #EC9164;
+    }
+    to {
+      fill: #f0ed3e;
+    }
+  }
+
+@keyframes color-change {
+    from {
+      fill: #EC9164;
+    }
+    to {
+      fill: #f0ed3e;
+    }
+  }
+
+  .sun {
+    -webkit-animation: 3s color-change infinite alternate linear;
+            animation: 3s color-change infinite alternate linear;
+  }
